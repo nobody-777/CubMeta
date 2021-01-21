@@ -34,4 +34,9 @@ You can using the following script to test you trained model using tasks sampled
 > python trainer_ensemble/test_fsl.py   --shot 5 --eval_shot 5 --num_test_episodes 3000   --test_model .your_trained_model_path --gpu 5
 
 ## Acknowledgement
+Our implementations use the source code from the following repositories and users:
+> [Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions]()
+> [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification]()
+> [Model-Agnostic Meta-Learning]()
+
 
