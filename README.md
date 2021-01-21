@@ -32,3 +32,6 @@ For example, you can dirrectly perform the run.sh  in the package to train and t
 ## Meta-test
 You can using the following script to test you trained model using tasks sampled from test set.
 > python trainer_ensemble/test_fsl.py   --shot 5 --eval_shot 5 --num_test_episodes 3000   --test_model .your_trained_model_path --gpu 5
+
+## Acknowledgement
+
