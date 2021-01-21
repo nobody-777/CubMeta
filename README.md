@@ -23,9 +23,9 @@ After downloading the dataset, please create a new folder named "images" under t
 ## Meta-training
 ### Meta-training using the single model
 To train the single meta-leaner using tasks sampled from all base classes, you should use codes from the package trainer_single. For example, you can use the following script to train the ProtoNet with the pre-trained ResNet-12 backnone on the base classes of mini-ImageNet.
-> python train_fsl.py  --max_epoch 80 --model_class ProtoNet  --backbone_class Res12 --dataset MiniImageNet --way 5 --query 15 --eval_query 15 --temperature 20 --step_size 10--init_weights ./saves/initialization/miniimagenet/Res12-pre.pth --eval_interval 1 --use_euclidean --model_name Stag1 --augment  --gpu 7 --lr 0.00001
-### Meta-training using our STEpwise Meta-training (STEM) method
-Since our STEM method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
+> python train_fsl.py  --max_epoch 50 --model_class ProtoNet  --backbone_class Res12 --dataset MiniImageNet --way 5 --query 15 --eval_query 15 --temperature 20 --step_size 10--init_weights ./saves/initialization/miniimagenet/Res12-pre.pth --eval_interval 1 --use_euclidean --model_name Stag1 --augment  --gpu 7 --lr 0.00001
+### Meta-training using our Curriculum-Based Meta-learning method
+Since our CBM method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
 For example, you can dirrectly perform the run.sh  in the package to train and test a specific meta-learner. 
 > run.sh
 
