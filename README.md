@@ -30,7 +30,7 @@ For example, you can dirrectly perform the run.sh  in the package to train and t
 > run.sh
 
 ## Meta-test
-You can using the following script to test you trained model using tasks sampled from test set.
+You can using the following script to test your trained model using tasks sampled from test set.
 > python trainer_ensemble/test_fsl.py   --shot 5 --eval_shot 5 --num_test_episodes 3000   --test_model .your_trained_model_path --gpu 5
 
 ## Acknowledgement
@@ -41,4 +41,8 @@ Our implementations use the source code from the following repositories and user
 
 > [Model-Agnostic Meta-Learning](https://github.com/cbfinn/maml)
 
+Thanks for their valuable work.
+
+## Contact
+If you have any questions about this implementation, please do not hesitate to contact with me. 
 
