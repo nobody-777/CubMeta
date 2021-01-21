@@ -35,8 +35,10 @@ You can using the following script to test you trained model using tasks sampled
 
 ## Acknowledgement
 Our implementations use the source code from the following repositories and users:
-> [Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions]()
-> [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification]()
-> [Model-Agnostic Meta-Learning]()
+> [Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions](https://github.com/Sha-Lab/FEAT)
+
+> [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification](https://github.com/dvornikita/fewshot_ensemble)
+
+> [Model-Agnostic Meta-Learning](https://github.com/cbfinn/maml)
 
 
