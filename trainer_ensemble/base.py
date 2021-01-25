@@ -52,13 +52,11 @@ class Trainer(object, metaclass=abc.ABCMeta):
                 self.trlog['min_loss'] = v_l
                 self.trlog['min_loss_epoch'] = self.train_epoch
                 self.save_model('min_loss')
-            # print('val_loss={:.4f} (Best: {:.4f})'.format(v_l, self.trlog['min_loss']))
 
             if v_pa >= self.trlog['max_pa']:
                 self.trlog['max_pa'] = v_pa
                 self.trlog['max_pa_epoch'] = self.train_epoch
                 self.save_model('max_pa')
-            # print('prob_acc={:.4f} (Best: {:.4f})'.format(v_pa, self.trlog['max_pa']))
 
             if self.train_epoch % 5 == 0:
                 self.save_model('epoch-'+ str(self.train_epoch))
