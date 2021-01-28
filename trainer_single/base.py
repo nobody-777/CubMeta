@@ -52,8 +52,7 @@ class Trainer(object, metaclass=abc.ABCMeta):
             vl, va, vap = self.evaluate(self.val_loader)
             self.logger.add_scalar('val_loss', float(vl), self.train_epoch)
             self.logger.add_scalar('val_acc', float(va),  self.train_epoch)
-            print('val_loss={:.4f}, val_acc={:.4f}'.format(vl,va))
-
+            
             # if va >= self.trlog['max_acc']:
             #     self.trlog['max_acc'] = va
             #     self.trlog['max_acc_interval'] = vap
