@@ -38,8 +38,6 @@ if __name__ == '__main__':
     if args.dataset == 'MiniImageNet':
         # Handle MiniImageNet
         from dataloader.mini_imagenet import MiniImageNet as Dataset
-    elif args.dataset == 'CUB':
-        from dataloader.cub import CUB as Dataset
     elif args.dataset == 'TieredImagenet':
         from dataloader.tiered_imagenet import tieredImageNet as Dataset
     else:
