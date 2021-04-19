@@ -8,3 +8,4 @@ The Mini-ImageNet dataset is a subset of the ImageNet that includes a total numb
 
 ### Tiered-ImageNet
 Tiered-ImageNet includes a broader number of classes. There are 351, 97 and 160 classes for meta-training, meta-validation and meta-test respectively.
+
