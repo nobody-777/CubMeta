@@ -39,7 +39,7 @@ Our implementations use the source code from the following repositories and user
 
 > [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification](https://github.com/dvornikita/fewshot_ensemble)
 
-> [Model-Agnostic Meta-Learning](https://github.com/AntreasAntoniou/HowToTrainYourMAMLPytorch)
+> [How To Train Your MAML](https://github.com/AntreasAntoniou/HowToTrainYourMAMLPytorch)
 
 Thanks for their valuable work.
 
