@@ -11,6 +11,7 @@ from trainer_single.utils import pprint, ensure_path, Averager, Timer, count_acc
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
+
 # pre-train trainer_single, compute validation acc after 500 epoches
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
