@@ -1,5 +1,6 @@
 # CBM
-The PyTorch implementation of the paper "Curriculum-Based Meta-learning"
+The PyTorch implementation of the paper "Curriculum-Based Meta-learning". In this paper, we present a Curriculum-Based Meta-learning (CBM) method to train the meta-learner using tasks from easy to hard. Specifically, the framework of CBM is in a progressive way, and in each step, we design a module named BrotherNet to establish harder tasks and an effective learning scheme for obtaining an ensemble of stronger meta-learners. In this way, the meta-learner’s generalization ability can be progressively improved, and better
+performance can be obtained even with fewer training tasks. 
 ![avatar](https://github.com/nobody-777/CBM/blob/master/framework.png)
 
 ## Prerequisites
