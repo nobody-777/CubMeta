@@ -30,8 +30,8 @@ To train the single meta-leaner using tasks sampled from all base classes, you s
 Since our CBM method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
 For example, you can dirrectly perform the Demo.sh  in the package to train and test a specific meta-learner. 
 > Demo.sh
-### Swith epochs and totol tasks used for meta-training CBM based methods. Each epoch contains 100 tasks.
-![avatar](https://github.com/nobody-777/CBM/blob/master/CD.png)
+### Swith epochs and totol tasks used for meta-training CBM based methods. Each epoch contains 100 tasks. Note that, distributed training is used to run the two BrotherNets in the 2nd layer of CBM in parallel. 
+![avatar](https://github.com/nobody-777/CBM/blob/master/epoch.png)
 
 ## Meta-test
 You can using the following script to test your trained model using tasks sampled from test set.
