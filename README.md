@@ -1,5 +1,6 @@
 # CBM
 The PyTorch implementation of the paper "Curriculum-Based Meta-learning"
+![avatar](https://github.com/nobody-777/CBM/blob/master/framework.png)
 
 ## Prerequisites
 - Python 3.5
