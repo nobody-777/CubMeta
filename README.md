@@ -44,11 +44,11 @@ You can using the following script to test your trained model using tasks sample
 
 ## Acknowledgement
 Our implementations use the source code from the following repositories and users:
-> [Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions](https://github.com/Sha-Lab/FEAT)
+> [Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions](https://github.com/Sha-Lab/FEAT), CVPR2020
 
-> [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification](https://github.com/dvornikita/fewshot_ensemble)
+> [Diversity with Cooperation: Ensemble Methods for Few-Shot Classification](https://github.com/dvornikita/fewshot_ensemble), ICCV2019
 
-> [How To Train Your MAML](https://github.com/AntreasAntoniou/HowToTrainYourMAMLPytorch)
+> [How To Train Your MAML](https://github.com/AntreasAntoniou/HowToTrainYourMAMLPytorch), ICLR2019
 
 Thanks for their valuable work.
 
