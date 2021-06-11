@@ -29,7 +29,7 @@ Since our CBM method is a two-layer recursive version of the designed BrotherNet
 For example, you can dirrectly perform the Demo.sh  in the package to train and test a specific meta-learner. 
 > Demo.sh
 ### Swith epochs and totol tasks used for meta-training CBM based methods. Each epoch contains 100 tasks.
-![avatar](C:\Users\ASUS\Desktop\CD.png)
+![avatar](https://github.com/nobody-777/CBM/blob/master/CD.png)
 
 ## Meta-test
 You can using the following script to test your trained model using tasks sampled from test set.
