@@ -32,9 +32,9 @@ For example, you can dirrectly perform the Demo.sh  in the package to train and 
 > Demo.sh
 ### Swith epochs and totol tasks used for meta-training CBM based methods. 
 Note that: 
->  Each epoch contains 100 tasks. 
->  Distributed training is used to run the two BrotherNets in the 2nd layer of CBM in parallel. 
->  The results in the table are epochs used in the current meta-training stage. 
+- Each epoch contains 100 tasks. 
+- Distributed training is used to run the two BrotherNets in the 2nd layer of CBM in parallel. 
+- The results in the table are epochs used in the current meta-training stage. 
 ![avatar](https://github.com/nobody-777/CBM/blob/master/switch_epoch.png)
 
 ## Meta-test
