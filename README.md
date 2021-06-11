@@ -35,6 +35,7 @@ Note that:
 - Each epoch contains 100 tasks. 
 - Distributed training is used to run the two BrotherNets in the 2nd layer of CBM in parallel. 
 - The results in the table are epochs used in the current meta-training stage. 
+
 ![avatar](https://github.com/nobody-777/CBM/blob/master/switch_epoch.png)
 
 ## Meta-test
