@@ -110,21 +110,29 @@ class FSLTrainer(Trainer):
                         logits_b, _ = self.models[1](batches[1][0])
                         predictions_a = torch.softmax(logits_a, dim=-1)
                         predictions_b = torch.softmax(logits_b, dim=-1)
-
+                        
+                    kl_loss_a = []
                     # Update model_a using subset_b, under the guidance of model_b
                     logits0, _ = self.models[0](batches[1][0])
                     predictions0 = torch.softmax(logits0, dim=-1)
                     acc_a = count_acc(logits0, label)
                     ce_loss_model_a = F.cross_entropy(logits0, label)
-                    kl_loss_model_a2b = kl_loss_compute(predictions0, predictions_b)
+                    for k in range(len(predictions0)):
+                        kl = F.kl_div(predictions0[k].softmax(dim=-1).log(), predictions_b[k].softmax(dim=-1), reduction='batchmean')
+                        kl_loss_a.append(kl)
+                    kl_loss_model_a2b = sum(kl_loss_a)
                     loss_a = ce_loss_model_a +  kl_loss_model_a2b
-
+                    
+                    kl_loss_b = []
                     # Update model_b using subset_a, under the guidance of model_a
                     logits1, _ = self.models[1](batches[0][0])
                     predictions1 = torch.softmax(logits1, dim=-1)
                     acc_b = count_acc(logits1, label)
                     ce_loss_model_b = F.cross_entropy(logits1, label)
-                    kl_loss_model_b2a = kl_loss_compute(predictions1, predictions_a)
+                    for k in range(len(predictions0)):
+                        kl = F.kl_div(predictions1[k].softmax(dim=-1).log(), predictions_a[k].softmax(dim=-1), reduction='batchmean')
+                        kl_loss_b.append(kl)
+                    kl_loss_model_b2a = sum(kl_loss_b)
                     loss_b =  ce_loss_model_b +  kl_loss_model_b2a
 
                     loss = loss_a + loss_b
