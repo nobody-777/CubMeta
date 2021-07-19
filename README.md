@@ -1,7 +1,7 @@
-# CBM
-The PyTorch implementation of the paper "Curriculum-Based Meta-learning". In this paper, we present a Curriculum-Based Meta-learning (CBM) method to train the meta-learner using tasks from easy to hard. Specifically, the framework of CBM is in a progressive way, and in each step, we design a module named BrotherNet to establish harder tasks and an effective learning scheme for obtaining an ensemble of stronger meta-learners. In this way, the meta-learner’s generalization ability can be progressively improved, and better
+# CubMeta
+The PyTorch implementation of the paper "Curriculum-Based Meta-learning". In this paper, we present a Curriculum-Based Meta-learning (CubMeta) method to train the meta-learner using tasks from easy to hard. Specifically, the framework of CubMeta is in a progressive way, and in each step, we design a module named BrotherNet to establish harder tasks and an effective learning scheme for obtaining an ensemble of stronger meta-learners. In this way, the meta-learner’s generalization ability can be progressively improved, and better
 performance can be obtained even with fewer training tasks. 
-![avatar](https://github.com/nobody-777/CBM/blob/master/framework.png)
+![avatar](https://github.com/nobody-777/CubMeta/blob/master/framework.png)
 
 ## Prerequisites
 - Python 3.5
@@ -27,7 +27,7 @@ After downloading the dataset, please create a new folder named "images" under t
 To train the single meta-leaner using tasks sampled from all base classes, you should use codes from the package trainer_single. For example, you can use the following script to train the ProtoNet with the pre-trained ResNet-12 backnone on the base classes of mini-ImageNet.
 > python train_fsl.py  --max_epoch 50 --model_class ProtoNet  --backbone_class Res12 --dataset MiniImageNet --way 5 --query 15 --eval_query 15 --temperature 20 --step_size 10   --use_euclidean --model_name Stag1  --gpu 7 --lr 0.00001 --init_weights ./saves/initialization/miniimagenet/Res12-pre.pth
 ### Meta-training using our Curriculum-Based Meta-learning method
-Since our CBM method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
+Since our method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
 For example, you can dirrectly perform the Demo.sh  in the package to train and test a specific meta-learner. 
 > Demo.sh
 
