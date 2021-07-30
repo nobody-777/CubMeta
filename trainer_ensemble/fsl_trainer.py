@@ -117,9 +117,7 @@ class FSLTrainer(Trainer):
                     predictions0 = torch.softmax(logits0, dim=-1)
                     acc_a = count_acc(logits0, label)
                     ce_loss_model_a = F.cross_entropy(logits0, label)
-                    for k in range(len(predictions0)):
-                        kl = F.kl_div(predictions0[k].softmax(dim=-1).log(), predictions_b[k].softmax(dim=-1), reduction='batchmean')
-                        kl_loss_a.append(kl)
+                    kl = F.kl_div(predictions0.softmax(dim=-1).log(), predictions_b.softmax(dim=-1), reduction='batchmean')
                     kl_loss_model_a2b = sum(kl_loss_a)
                     loss_a = ce_loss_model_a +  kl_loss_model_a2b
                     
@@ -129,10 +127,7 @@ class FSLTrainer(Trainer):
                     predictions1 = torch.softmax(logits1, dim=-1)
                     acc_b = count_acc(logits1, label)
                     ce_loss_model_b = F.cross_entropy(logits1, label)
-                    for k in range(len(predictions0)):
-                        kl = F.kl_div(predictions1[k].softmax(dim=-1).log(), predictions_a[k].softmax(dim=-1), reduction='batchmean')
-                        kl_loss_b.append(kl)
-                    kl_loss_model_b2a = sum(kl_loss_b)
+                    kl_loss_model_b2a = F.kl_div(predictions1.softmax(dim=-1).log(), predictions_a.softmax(dim=-1), reduction='batchmean')
                     loss_b =  ce_loss_model_b +  kl_loss_model_b2a
 
                     loss = loss_a + loss_b
