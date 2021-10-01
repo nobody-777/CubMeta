@@ -1,7 +1,7 @@
 # CubMeta
 The PyTorch implementation of the paper "Curriculum-Based Meta-learning". In this paper, we present a Curriculum-Based Meta-learning (CubMeta) method to train the meta-learner using tasks from easy to hard. Specifically, the framework of CubMeta is in a progressive way, and in each step, we design a module named BrotherNet to establish harder tasks and an effective learning scheme for obtaining an ensemble of stronger meta-learners. In this way, the meta-learner’s generalization ability can be progressively improved, and better
 performance can be obtained even with fewer training tasks. 
-![avatar](https://github.com/nobody-777/CubMeta/blob/master/framework.png)
+![avatar](https://github.com/nobody-777/CubMeta/blob/master/pipeline.png)
 
 ## Prerequisites
 - Python 3.5
@@ -30,6 +30,9 @@ To train the single meta-leaner using tasks sampled from all base classes, you s
 Since our method is a two-layer recursive version of the designed BrotherNet module, we give the implementation of the BrotherNet in trainer_ensemble package. 
 For example, you can dirrectly perform the Demo.sh  in the package to train and test a specific meta-learner. 
 > Demo.sh
+
+### Switch/Total epochs
+![avatar](https://github.com/nobody-777/CubMeta/blob/master/switch_epoch.png)
 
 ## Meta-test
 You can using the following script to test your trained model using tasks sampled from test set.
