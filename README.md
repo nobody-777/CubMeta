@@ -48,4 +48,15 @@ Thanks for their valuable work.
 ## Contact
 If you have any questions about this implementation, please do not hesitate to contact with me. 
 
+## Contact
+@inproceedings{cubmeta,
+  author    = {Ji Zhang,
+               Jingkuan Song,
+               Yazhou Yao, and
+               Lianli Gao},
+  title     = {Curriculum-Based Meta-learning},
+  booktitle = {ACM Multimedia},
+  year      = {2021}
+}
+
 
