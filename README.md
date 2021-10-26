@@ -31,9 +31,6 @@ Since our method is a two-layer recursive version of the designed BrotherNet mod
 For example, you can dirrectly perform the Demo.sh  in the package to train and test a specific meta-learner. 
 > Demo.sh
 
-### Switch/Total epochs
-![avatar](https://github.com/nobody-777/CubMeta/blob/master/switch_epoch.png)
-
 ## Meta-test
 You can using the following script to test your trained model using tasks sampled from test set.
 > python trainer_ensemble/test_fsl.py   --shot 5 --eval_shot 5 --num_test_episodes 3000   --test_model .your_trained_model_path --gpu 5
